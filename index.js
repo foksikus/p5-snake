@@ -72,8 +72,6 @@ class Snake {
         let tail = new Tile(lastPos.x, lastPos.y);
         tail.velocity.x = 0;
         tail.velocity.y = 0;
-        console.log(tail);
-        
         this.tiles.push(tail);
     }
 
