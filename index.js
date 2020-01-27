@@ -5,7 +5,7 @@ let tileHeight = 15;
 function setup() {
     createCanvas(600, 450);
     frameRate(3);
-    snake = new Snake(150, 150);
+    snake = new Snake();
 }
 
 function draw() {
@@ -111,10 +111,10 @@ class Tile {
     applyVelocity() {
         let finalPosX = this.position.x + this.velocity.x;
         let finalPosY = this.position.y + this.velocity.y;
-        if (finalPosX < 0 || finalPosX >= width) {
+        if (finalPosX < 0 || finalPosX * tileWidth >= width) {
             return;
         }
-        if (finalPosY < 0 || finalPosY >= height) {
+        if (finalPosY < 0 || finalPosY * tileHeight  >= height) {
             return;
         }
 
